@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guilherme Cardoso de Araujo - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbarNav">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg border-bottom py-3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!--Page sections part-->
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#home">
+                                <span class="animated-link">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#about">
+                                <span class="animated-link">About</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#projects">
+                                <span class="animated-link">Projects</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <span class="animated-link">Cv</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <span class="animated-link">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!--Social medias part-->
+                    <ul class="navbar-nav ms-auto gap-3 flex-row">
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link px-0 nav-icon-hover" href="https://www.linkedin.com/in/guilherme-cardoso-de-araujo-038804325" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM9 17H6.5v-7H9v7zm-1.3-8.2a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18 17h-2.5v-3.5c0-1-.4-1.5-1.2-1.5-.9 0-1.3.6-1.3 1.5V17H10.5v-7H13v1c.4-.7 1.1-1.2 2.1-1.2 1.6 0 2.9 1.2 2.9 3.5V17z"/></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link px-0 nav-icon-hover" href="https://github.com/guilhermecara" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link px-0 nav-icon-hover" href="#" target="_blank" rel="noopener" aria-label="Twitter/X">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link px-0 nav-icon-hover" href="#" target="_blank" rel="noopener" aria-label="CV">
+                            <svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Cv</title><path d="M14.727 6.727H14V0H4.91c-.905 0-1.637.732-1.637 1.636v20.728c0 .904.732 1.636 1.636 1.636h14.182c.904 0 1.636-.732 1.636-1.636V6.727h-6zm-.545 10.455H7.09v-1.364h7.09v1.364zm2.727-3.273H7.091v-1.364h9.818v1.364zm0-3.273H7.091V9.273h9.818v1.363zM14.727 6h6l-6-6v6z"/></svg>                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Beginning of animated shooting stars-->
+    <div class="stars"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <div class="shooting-star"></div>
+    <!--End of animated shooting stars-->
+
+    <main class="container py-5">
+        <!-- The Hero Section -->
+        <section id="home" class="row py-5 mt-5 min-vh-75">
+            <!-- col-lg-8 prevents the text from stretching across the whole ultra-wide monitor -->
+            <div class="col-lg-8">
+                <p class="text-info font-monospace mb-2">Hi, I'm</p>
+                
+                <h1 class="display-4 fw-bold mb-3">
+                    Guilherme Cardoso de Araujo
+                </h1>
+                
+                <h2 class="h4 text-secondary mb-4">
+                    Defensive Security Specialist & Software Developer.
+                </h2>
+                
+                <p class="lead text-secondary mb-5 lh-sm">
+                    I build robust, full-stack applications and architect secure infrastructure. 
+                    Whether I am developing useful software, hardening Linux environments, 
+                    or competing in CTFs, my focus is always on bridging the gap between efficient code and impenetrable defense.
+                </p>
+
+                <div class="d-flex gap-3">
+                    <a href="#about" class="btn btn-info text-dark fw-bold px-4 py-2 rounded-3">
+                        About me
+                    </a>
+                    <a href="#projects" class="btn btn-outline-secondary px-4 py-2 rounded-3">
+                        My projects
+                    </a>
+                </div>
+            </div>
+            <!--
+                <div class="col-lg-4 d-lg-block">
+                    <img src="img/hero-img.png" class="img-fluid hero-img"/>
+                </div>
+            -->
+        </section>
+        <!-- End of the Hero Section -->
+
+        <!-- Start of the About Me Section -->
+        <div class="row pt-5 mt-5">
+            <div class="col-5 d-flex align-items-center gap-3">
+                <h4 class="text-info lead mb-0 font-monospace fw-bold">About me</h4>
+                <hr class="flex-grow-1">
+            </div>
+        </div>
+
+        <section id="about" class="row min-vh-75">
+            <div class="col-lg-6 col-sm-12 mt-4">
+                <div class="d-flex gap-3">
+                    <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                    </svg>
+                    <p class="text-body-secondary ">Based in Quebec City, Canada.</p>
+                </div>
+                <div class="d-flex gap-3">
+                    <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backpack2" viewBox="0 0 16 16">
+                        <path d="M4.04 7.43a4 4 0 0 1 7.92 0 .5.5 0 1 1-.99.14 3 3 0 0 0-5.94 0 .5.5 0 1 1-.99-.14"/>
+                        <path fill-rule="evenodd" d="M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
+                        <path d="M6 2.341V2a2 2 0 1 1 4 0v.341c2.33.824 4 3.047 4 5.659v1.191l1.17.585a1.5 1.5 0 0 1 .83 1.342V13.5a1.5 1.5 0 0 1-1.5 1.5h-1c-.456.607-1.182 1-2 1h-7a2.5 2.5 0 0 1-2-1h-1A1.5 1.5 0 0 1 0 13.5v-2.382a1.5 1.5 0 0 1 .83-1.342L2 9.191V8a6 6 0 0 1 4-5.659M7 2v.083a6 6 0 0 1 2 0V2a1 1 0 0 0-2 0M3 13.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8A5 5 0 0 0 3 8zm-1-3.19-.724.362a.5.5 0 0 0-.276.447V13.5a.5.5 0 0 0 .5.5H2zm12 0V14h.5a.5.5 0 0 0 .5-.5v-2.382a.5.5 0 0 0-.276-.447L14 10.309Z"/>
+                    </svg>
+                    <p class="text-body-secondary">19 years old.</p>
+                </div>
+                <div class="d-flex gap-3">
+                    <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backpack2" viewBox="0 0 16 16">
+                         <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
+                    </svg>
+                    <p class="text-body-secondary">Cybersecurity / Full-Stack Development</p>
+                </div>
+                <div class="d-flex gap-3">
+                    <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backpack2" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8.646 5.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 8 8.646 6.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 8l1.647-1.646a.5.5 0 0 0 0-.708"/>
+                        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                    </svg>
+                    <p class="text-body-secondary">DEC in Informatics - Expected Graduation: Summer 2028</p>
+                </div>
+
+                <p class="mt-4">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Praesent neque urna, ornare quis tempus at, fringilla nec nibh. 
+                    Fusce interdum nisl vel rutrum ultrices. 
+                    Cras venenatis, elit ut efficitur pretium, augue mauris eleifend libero, eget pharetra justo est et nulla. 
+                    Sed ut ligula euismod, ornare risus vel, euismod urna. 
+                    Maecenas a lobortis dui. 
+                    Vestibulum ipsum sapien, venenatis quis commodo sed, aliquam dignissim leo. 
+                    Maecenas fringilla condimentum ex at consectetur. 
+                </p>
+            </div>
+            <div class="col-lg-4 col-sm-12">       
+                <p class="lead fw-bold">Key Skills</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Docker</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Azure</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Network Security</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">IAM</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">C# & .NET</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Blazor</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Linux / Arch</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">PostgreSQL</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">PHP</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Git & Github</span>
+                    <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Scrum</span>
+                </div>
+                <p class="lead fw-bold mt-4">Certifications and Achievements</p>
+                <ul class="list-unstyled text-body-secondary gap-2 d-flex flex-column">
+                    <li class="d-flex align-items-start gap-2">
+                        <span class="text-info">-></span>
+                        <span>1st Place: UnitedCTF 2025 (Cégep de Ste-Foy)</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                        <span class="text-info">-></span>
+                        <span>CompTIA: Security+ </span>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                        <span class="text-info">-></span>
+                        <span>"Ben 10 Cosmic Storm" (Roblox): 3M+ visits, 4K+ concurrent</span>
+                    </li>
+                    <li class="d-flex align-items-start gap-2">
+                        <span class="text-info">-></span>
+                        <span>Microsoft Certified: Azure Fundamentals (AZ-900)</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- End of the About me Section -->
+        
+        <!-- Start of the Projects Section -->
+        <div class="row pt-5 my-5">
+            <div class="col-5 d-flex align-items-center gap-3">
+                <h4 class="text-info lead mb-0 font-monospace fw-bold">My projects</h4>
+                <hr class="flex-grow-1">
+            </div>
+        </div>
+        
+        <section id="projects" class="row g-4 min-vh-75 mb-2">
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-secondary bg-body-secondary">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5z"/>
+                            </svg>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="text-secondary nav-icon-hover" aria-label="Roblox" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 48 48" width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs><style>.a{fill:none;stroke:#cfcfcf;stroke-linecap:round;stroke-linejoin:round;}</style></defs>
+                                        <path class="a" d="M41.2648,12.6719,14.7123,5.5572a1.666,1.666,0,0,0-2.04,1.178L5.5572,33.2877a1.666,1.666,0,0,0,1.178,2.04l26.5525,7.1147a1.666,1.666,0,0,0,2.04-1.178l7.1147-26.5525a1.666,1.666,0,0,0-1.178-2.04Z"></path><path class="a" d="M29.3193,20.51l-8.1808-2.192a.5133.5133,0,0,0-.6287.3629l-2.192,8.1808a.5133.5133,0,0,0,.3629.6287l8.1808,2.192a.5133.5133,0,0,0,.6287-.3629l2.192-8.1808A.5133.5133,0,0,0,29.3193,20.51Z"></path></g>
+                                    </svg>                                
+                                </a>
+
+                                <a href="#" class="text-secondary nav-icon-hover" aria-label="Live Demo" target="_blank" rel="noopener">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14zm-1 2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8h-2v8H5V7h8z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h5 class="card-title fw-bold mb-2">Ben 10 Cosmic Storm</h5>
+                        <p class="card-text text-body-secondary flex-grow-1 small">
+                            A fully-featured Roblox game reaching 3M+ visits and 4K+ concurrent players. 
+                            Built complete game systems including combat, progression, and server-side anti-cheat logic.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Roblox</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Luau</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Game Dev</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Project Management</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Game Dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CDiscord Project Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-secondary bg-body-secondary">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5z"/>
+                            </svg>
+                            <div class="d-flex gap-3">
+                                <a href="https://github.com/guilhermecara/cdiscord" class="text-secondary nav-icon-hover" aria-label="GitHub" target="_blank" rel="noopener">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h5 class="card-title fw-bold mb-2">CDiscord</h5>
+                        <p class="card-text text-body-secondary flex-grow-1 small">
+                            A lightweight, cross-platform Terminal User Interface for Discord built with Node.js 
+                            and the blessed library. It allows users to navigate servers, read channels, and chat directly from Linux and Windows terminals without the overhead of a heavy desktop client.
+                            It is only a mere 2 megabytes, compared to the heavy Discord client.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Node.js</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Cross-platform</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">TUI</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">TUI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GuiFotos Project Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-secondary bg-body-secondary">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5z"/>
+                            </svg>
+                            <div class="d-flex gap-3">
+                                <a href="https://github.com/guilhermecara/GuiFotos" class="text-secondary nav-icon-hover" aria-label="GitHub" target="_blank" rel="noopener">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                </a>
+                                </div>
+                        </div>
+                        <h5 class="card-title fw-bold mb-2">GuiFotos</h5>
+                        <p class="card-text text-body-secondary flex-grow-1 small">
+                            An open-source, self-hosted alternative to Google Photos designed with simplicity and privacy in mind. Built to provide a secure environment for family photo storage and sharing using a containerized backend.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">C# / .NET 8+</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Docker</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Self-Hosted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- MilkGrub BLUE Project Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-secondary bg-body-secondary">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5z"/>
+                            </svg>
+                            <div class="d-flex gap-3">
+                                <a href="https://github.com/guilhermecara/MilkGrub-Blue" class="text-secondary nav-icon-hover" aria-label="GitHub" target="_blank" rel="noopener">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h5 class="card-title fw-bold mb-2">MilkGrub BLUE</h5>
+                        <p class="card-text text-body-secondary flex-grow-1 small">
+                            A custom GRUB bootloader theme inspired by the visual novel "Milk outside a bag of milk", modified with a blue color palette. Designed for Linux users who want a cohesive, personalized UI aesthetic from the moment their system boots.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">GRUB2</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Linux Customization</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- Self-Hosting Project Card -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 border-secondary bg-body-secondary">
+                    <div class="card-body d-flex flex-column p-4">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5z"/>
+                            </svg>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="text-secondary nav-icon-hover" aria-label="Live Demo" target="_blank" rel="noopener">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14zm-1 2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8h-2v8H5V7h8z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h5 class="card-title fw-bold mb-2">Personal Homelab Infrastructure</h5>
+                        <p class="card-text text-body-secondary flex-grow-1 small">
+                            A custom self-hosted Linux server environment that actively hosts this portfolio site alongside personal media services. Features a Suwayomi instance for manga hosting and a dedicated public-facing server for game clips, utilizing Cloudflare as a secure reverse proxy. The entire infrastructure is managed remotely via a Tailscale private VPN mesh.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mt-3">
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Linux</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Docker</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Tailscale</span>
+                            <span class="badge bg-light-subtle py-1 fw-normal rounded-3">Self-Hosted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- End of the Projects Section -->
+    </main>
+
+    <footer class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+            <div class="col-12 text-center fst-italic fs-6">
+                <p>© Copyright Guilherme Cardoso de Araujo 2026. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

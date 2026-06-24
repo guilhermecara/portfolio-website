@@ -1,0 +1,41 @@
+/* File dedicated to modify bootstrap's/browser's defaults */
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #0f0f0f; 
+    --bs-body-color: #ffffff; 
+    --bs-border-color: rgba(255, 255, 255, 0.07); 
+}
+
+
+/* Nav icon hover */
+
+.nav-icon-hover svg {
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+.nav-icon-hover:hover svg {
+    transform: translateY(-3px); 
+    fill: var(--bs-info);
+}
+
+.min-vh-50 { min-height: 50vh; }
+.min-vh-75 { min-height: 75vh; }
+
+/*Beginning of scroll wheel removal */
+
+/* For Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: none;
+}
+
+/* For Internet Explorer and Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+/*End of scroll wheel removal */
