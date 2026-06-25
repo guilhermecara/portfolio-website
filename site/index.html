@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/translations.js" defer></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navbarNav">
     <header class="sticky-top">
@@ -16,37 +17,35 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <!--Page sections part-->
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#home">
-                                <span class="animated-link">Home</span>
+                                <span class="animated-link" data-i18n="nav.home">Home</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#about">
-                                <span class="animated-link">About</span>
+                                <span class="animated-link" data-i18n="nav.about">About</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="#projects">
-                                <span class="animated-link">Projects</span>
+                                <span class="animated-link" data-i18n="nav.projects">Projects</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
+                            <a class="nav-link" aria-current="page" href="#contact">
+                                <span class="animated-link" data-i18n="nav.contact">Contact</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" target="_blank" href="cv/guilherme-cardoso-de-araujo-cv-fr.pdf">
                                 <span class="animated-link">Cv</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">
-                                <span class="animated-link">Contact</span>
                             </a>
                         </li>
                     </ul>
 
-                    <!--Social medias part-->
-                    <ul class="navbar-nav ms-auto gap-3 flex-row">
+                    <ul class="navbar-nav ms-auto gap-3 flex-row align-items-center">
                         <li class="nav-item d-flex align-items-center">
                             <a class="nav-link px-0 nav-icon-hover" href="https://www.linkedin.com/in/guilherme-cardoso-de-araujo-038804325" target="_blank" rel="noopener" aria-label="LinkedIn">
                                 <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM9 17H6.5v-7H9v7zm-1.3-8.2a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18 17h-2.5v-3.5c0-1-.4-1.5-1.2-1.5-.9 0-1.3.6-1.3 1.5V17H10.5v-7H13v1c.4-.7 1.1-1.2 2.1-1.2 1.6 0 2.9 1.2 2.9 3.5V17z"/></svg>
@@ -64,8 +63,37 @@
                         </li>
                         <li class="nav-item d-flex align-items-center">
                             <a class="nav-link px-0 nav-icon-hover" href="#" target="_blank" rel="noopener" aria-label="CV">
-                            <svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Cv</title><path d="M14.727 6.727H14V0H4.91c-.905 0-1.637.732-1.637 1.636v20.728c0 .904.732 1.636 1.636 1.636h14.182c.904 0 1.636-.732 1.636-1.636V6.727h-6zm-.545 10.455H7.09v-1.364h7.09v1.364zm2.727-3.273H7.091v-1.364h9.818v1.364zm0-3.273H7.091V9.273h9.818v1.363zM14.727 6h6l-6-6v6z"/></svg>                        </a>
+                                <svg width="24" height="24" role="img" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Cv</title><path d="M14.727 6.727H14V0H4.91c-.905 0-1.637.732-1.637 1.636v20.728c0 .904.732 1.636 1.636 1.636h14.182c.904 0 1.636-.732 1.636-1.636V6.727h-6zm-.545 10.455H7.09v-1.364h7.09v1.364zm2.727-3.273H7.091v-1.364h9.818v1.364zm0-3.273H7.091V9.273h9.818v1.363zM14.727 6h6l-6-6v6z"/></svg>
+                            </a>
                         </li>
+                        
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="dropdown">
+                                <button class="btn btn-link nav-link px-0 nav-icon-hover dropdown-toggle d-flex align-items-center gap-1"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                        aria-label="Language">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                    </svg>
+                                    <span class="small" id="current-lang">EN</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item active" href="#" data-lang="EN">
+                                            🇬🇧 English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#" data-lang="FR">
+                                            🇫🇷 Français
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -86,27 +114,27 @@
         <section id="home" class="row py-5 mt-5 min-vh-75">
             <!-- col-lg-8 prevents the text from stretching across the whole ultra-wide monitor -->
             <div class="col-lg-8">
-                <p class="text-info font-monospace mb-2">Hi, I'm</p>
+                <p class="text-info font-monospace mb-2" data-i18n="hero.greeting">Hi, I'm</p>
                 
                 <h1 class="display-4 fw-bold mb-3">
                     Guilherme Cardoso de Araujo
                 </h1>
                 
-                <h2 class="h4 text-secondary mb-4">
+                <h2 class="h4 text-secondary mb-4" data-i18n="hero.role">
                     Defensive Security Specialist & Software Developer.
                 </h2>
                 
-                <p class="lead text-secondary mb-5 lh-sm">
+                <p class="lead text-secondary mb-5 lh-sm" data-i18n="hero.description">
                     I build robust, full-stack applications and architect secure infrastructure. 
                     Whether I am developing useful software, hardening Linux environments, 
                     or competing in CTFs, my focus is always on bridging the gap between efficient code and impenetrable defense.
                 </p>
 
                 <div class="d-flex gap-3">
-                    <a href="#about" class="btn btn-info text-dark fw-bold px-4 py-2 rounded-3">
+                    <a href="#about" class="btn btn-info text-dark fw-bold px-4 py-2 rounded-3" data-i18n="hero.about">
                         About me
                     </a>
-                    <a href="#projects" class="btn btn-outline-secondary px-4 py-2 rounded-3">
+                    <a href="#projects" class="btn btn-outline-secondary px-4 py-2 rounded-3" data-i18n="hero.projects">
                         My projects
                     </a>
                 </div>
@@ -122,7 +150,7 @@
         <!-- Start of the About Me Section -->
         <div class="row pt-5 mt-5">
             <div class="col-5 d-flex align-items-center gap-3">
-                <h4 class="text-info lead mb-0 font-monospace fw-bold">About me</h4>
+                <h4 class="text-info lead mb-0 font-monospace fw-bold" data-i18n="about.title">About me</h4>
                 <hr class="flex-grow-1">
             </div>
         </div>
@@ -134,7 +162,7 @@
                         <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
                         <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                     </svg>
-                    <p class="text-body-secondary ">Based in Quebec City, Canada.</p>
+                    <p class="text-body-secondary" data-i18n="about.city">Based in Quebec City, Canada.</p>
                 </div>
                 <div class="d-flex gap-3">
                     <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backpack2" viewBox="0 0 16 16">
@@ -142,13 +170,13 @@
                         <path fill-rule="evenodd" d="M4 9.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm1 .5v3h6v-3h-1v.5a.5.5 0 0 1-1 0V10z"/>
                         <path d="M6 2.341V2a2 2 0 1 1 4 0v.341c2.33.824 4 3.047 4 5.659v1.191l1.17.585a1.5 1.5 0 0 1 .83 1.342V13.5a1.5 1.5 0 0 1-1.5 1.5h-1c-.456.607-1.182 1-2 1h-7a2.5 2.5 0 0 1-2-1h-1A1.5 1.5 0 0 1 0 13.5v-2.382a1.5 1.5 0 0 1 .83-1.342L2 9.191V8a6 6 0 0 1 4-5.659M7 2v.083a6 6 0 0 1 2 0V2a1 1 0 0 0-2 0M3 13.5A1.5 1.5 0 0 0 4.5 15h7a1.5 1.5 0 0 0 1.5-1.5V8A5 5 0 0 0 3 8zm-1-3.19-.724.362a.5.5 0 0 0-.276.447V13.5a.5.5 0 0 0 .5.5H2zm12 0V14h.5a.5.5 0 0 0 .5-.5v-2.382a.5.5 0 0 0-.276-.447L14 10.309Z"/>
                     </svg>
-                    <p class="text-body-secondary">19 years old.</p>
+                    <p class="text-body-secondary" data-i18n="about.age">19 years old.</p>
                 </div>
                 <div class="d-flex gap-3">
                     <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backpack2" viewBox="0 0 16 16">
                          <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
                     </svg>
-                    <p class="text-body-secondary">Cybersecurity / Full-Stack Development</p>
+                    <p class="text-body-secondary" data-i18n="about.interest">Cybersecurity / Full-Stack Development</p>
                 </div>
                 <div class="d-flex gap-3">
                     <svg class="text-info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backpack2" viewBox="0 0 16 16">
@@ -156,22 +184,24 @@
                         <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
                         <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
                     </svg>
-                    <p class="text-body-secondary">DEC in Informatics - Expected Graduation: Summer 2028</p>
+                    <p class="text-body-secondary" data-i18n="about.education">DEC in Informatics - Expected Graduation: Summer 2028</p>
                 </div>
 
-                <p class="mt-4">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Praesent neque urna, ornare quis tempus at, fringilla nec nibh. 
-                    Fusce interdum nisl vel rutrum ultrices. 
-                    Cras venenatis, elit ut efficitur pretium, augue mauris eleifend libero, eget pharetra justo est et nulla. 
-                    Sed ut ligula euismod, ornare risus vel, euismod urna. 
-                    Maecenas a lobortis dui. 
-                    Vestibulum ipsum sapien, venenatis quis commodo sed, aliquam dignissim leo. 
-                    Maecenas fringilla condimentum ex at consectetur. 
+                <p class="mt-4" data-i18n="about.description">
+                    Hi, I'm Guilherme Cardoso de Araujo, a student in the Techniques de l’informatique program at Cégep de Sainte-Foy. 
+                    I have a deep passion for software development, video games, and a rapidly growing expertise in cybersecurity.
+                     My technical journey began in my teens when I developed a Roblox project that amassed over 3 million visits, 
+                    teaching me early on how to build and scale interactive experiences for massive audiences. 
+                    Today, I build robust applications using C#, Node.js, and PostgreSQL, while also achieving cybersecurity milestones like earning my ISC2 CC certification, 
+                    participating in CTF competitions, and preparing for the CompTIA Security+. 
+                    Beyond the screen, I am always seeking new ways to push my limits, whether I am training in Brazilian Jiu-Jitsu, 
+                    flying model airplanes, or playing the guitar, bass, and drums.
+                    I am eager to bring my versatile technical background and disciplined problem-solving mindset to ambitious, high-impact projects in software and security. My biggest asset is surely my never-ending curiosity to learn and improve myself.
+
                 </p>
             </div>
             <div class="col-lg-4 col-sm-12">       
-                <p class="lead fw-bold">Key Skills</p>
+                <p class="lead fw-bold" data-i18n="about.keyskills">Key Skills</p>
                 <div class="d-flex flex-wrap gap-2">
                     <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Docker</span>
                     <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Azure</span>
@@ -185,11 +215,11 @@
                     <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Git & Github</span>
                     <span class="badge bg-light-subtle py-2 fs-6 fw-normal rounded-3">Scrum</span>
                 </div>
-                <p class="lead fw-bold mt-4">Certifications and Achievements</p>
+                <p class="lead fw-bold mt-4" data-i18n="about.credentials">Certifications and Achievements</p>
                 <ul class="list-unstyled text-body-secondary gap-2 d-flex flex-column">
                     <li class="d-flex align-items-start gap-2">
                         <span class="text-info">-></span>
-                        <span>1st Place: UnitedCTF 2025 (Cégep de Ste-Foy)</span>
+                        <span data-i18n="about.unitedCTF">1st Place: UnitedCTF 2025 (Cégep de Ste-Foy)</span>
                     </li>
                     <li class="d-flex align-items-start gap-2">
                         <span class="text-info">-></span>
@@ -197,7 +227,7 @@
                     </li>
                     <li class="d-flex align-items-start gap-2">
                         <span class="text-info">-></span>
-                        <span>"Ben 10 Cosmic Storm" (Roblox): 3M+ visits, 4K+ concurrent</span>
+                        <span data-i18n="about.ben10">"Ben 10 Cosmic Storm" (Roblox): 3M+ visits, 4K+ concurrent</span>
                     </li>
                     <li class="d-flex align-items-start gap-2">
                         <span class="text-info">-></span>
@@ -211,12 +241,12 @@
         <!-- Start of the Projects Section -->
         <div class="row pt-5 my-5">
             <div class="col-5 d-flex align-items-center gap-3">
-                <h4 class="text-info lead mb-0 font-monospace fw-bold">My projects</h4>
+                <h4 class="text-info lead mb-0 font-monospace fw-bold" data-i18n="projects.title">My projects</h4>
                 <hr class="flex-grow-1">
             </div>
         </div>
         
-        <section id="projects" class="row g-4 min-vh-75 mb-2">
+        <section id="projects" class="row g-4 min-vh-75 my-2">
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100 border-secondary bg-body-secondary">
                     <div class="card-body d-flex flex-column p-4">
@@ -237,7 +267,7 @@
                             </div>
                         </div>
                         <h5 class="card-title fw-bold mb-2">Ben 10 Cosmic Storm</h5>
-                        <p class="card-text text-body-secondary flex-grow-1 small">
+                        <p class="card-text text-body-secondary flex-grow-1 small" data-i18n="projects.ben10description">
                             A fully-featured Roblox game reaching 3M+ visits and 4K+ concurrent players. 
                             Built complete game systems including combat, progression, and server-side anti-cheat logic.
                         </p>
@@ -267,7 +297,7 @@
                             </div>
                         </div>
                         <h5 class="card-title fw-bold mb-2">CDiscord</h5>
-                        <p class="card-text text-body-secondary flex-grow-1 small">
+                        <p class="card-text text-body-secondary flex-grow-1 small" data-i18n="projects.cdiscordDescription">
                             A lightweight, cross-platform Terminal User Interface for Discord built with Node.js 
                             and the blessed library. It allows users to navigate servers, read channels, and chat directly from Linux and Windows terminals without the overhead of a heavy desktop client.
                             It is only a mere 2 megabytes, compared to the heavy Discord client.
@@ -297,7 +327,7 @@
                                 </div>
                         </div>
                         <h5 class="card-title fw-bold mb-2">GuiFotos</h5>
-                        <p class="card-text text-body-secondary flex-grow-1 small">
+                        <p class="card-text text-body-secondary flex-grow-1 small" data-i18n="projects.guifotosDescription">
                             An open-source, self-hosted alternative to Google Photos designed with simplicity and privacy in mind. Built to provide a secure environment for family photo storage and sharing using a containerized backend.
                         </p>
                         <div class="d-flex flex-wrap gap-2 mt-3">
@@ -325,7 +355,7 @@
                             </div>
                         </div>
                         <h5 class="card-title fw-bold mb-2">MilkGrub BLUE</h5>
-                        <p class="card-text text-body-secondary flex-grow-1 small">
+                        <p class="card-text text-body-secondary flex-grow-1 small" data-i18n="projects.milkgrubDescription">
                             A custom GRUB bootloader theme inspired by the visual novel "Milk outside a bag of milk", modified with a blue color palette. Designed for Linux users who want a cohesive, personalized UI aesthetic from the moment their system boots.
                         </p>
                         <div class="d-flex flex-wrap gap-2 mt-3">
@@ -352,8 +382,8 @@
                                 </a>
                             </div>
                         </div>
-                        <h5 class="card-title fw-bold mb-2">Personal Homelab Infrastructure</h5>
-                        <p class="card-text text-body-secondary flex-grow-1 small">
+                        <h5 class="card-title fw-bold mb-2" data-i18n="projects.homelabTitle">Personal Homelab Infrastructure</h5>
+                        <p class="card-text text-body-secondary flex-grow-1 small" data-i18n="projects.homelabDescription">
                             A custom self-hosted Linux server environment that actively hosts this portfolio site alongside personal media services. Features a Suwayomi instance for manga hosting and a dedicated public-facing server for game clips, utilizing Cloudflare as a secure reverse proxy. The entire infrastructure is managed remotely via a Tailscale private VPN mesh.
                         </p>
                         <div class="d-flex flex-wrap gap-2 mt-3">
@@ -368,6 +398,45 @@
             
         </section>
         <!-- End of the Projects Section -->
+
+        <!-- Start of the Contact Section-->
+        <div class="row pt-5 my-5">
+            <div class="col-5 d-flex align-items-center gap-3">
+                <h4 class="text-info lead mb-0 font-monospace fw-bold" data-i18n="contact.title">Contact me</h4>
+                <hr class="flex-grow-1">
+            </div>
+        </div>
+
+        <section id="contact" class="row align-items-start min-vh-75 my-2">
+            <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                <p class="text-body-secondary lh-lg" data-i18n="contact.description">
+                    I'm currently open to internship opportunities and exciting collaborations.
+                    Whether you have a project in mind or just want to say hi, my inbox is always open!
+                </p>
+            </div>
+            <div class="col-lg-4 col-12 offset-lg-1">
+                <div class="d-flex flex-column gap-2">
+                    <a href="mailto:guilhermecaraujoo1@gmail.com" class="btn btn-info py-2 px-4 fw-medium rounded-pill shadow-sm d-flex align-items-center justify-content-center w-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                        </svg>
+                        guilhermecaraujoo1@gmail.com
+                    </a>
+                    <a href="tel:+15819220155" class="btn btn-outline-info py-2 px-4 fw-medium rounded-pill d-flex align-items-center justify-content-center w-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="me-2" viewBox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                        </svg>
+                        +1 (581) 922-0155
+                    </a>
+                    <a href="https://www.linkedin.com/in/guilherme-cardoso-de-araujo-038804325" target="_blank" rel="noopener" class="btn btn-outline-info py-2 px-4 fw-medium rounded-pill d-flex align-items-center justify-content-center w-100">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="me-2" aria-hidden="true">
+                            <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM9 17H6.5v-7H9v7zm-1.3-8.2a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18 17h-2.5v-3.5c0-1-.4-1.5-1.2-1.5-.9 0-1.3.6-1.3 1.5V17H10.5v-7H13v1c.4-.7 1.1-1.2 2.1-1.2 1.6 0 2.9 1.2 2.9 3.5V17z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="container-fluid mt-5">
