@@ -25,6 +25,12 @@ This project requires no build tools or package managers.
    ```bash
    git clone [https://github.com/guilhermecara/portfolio.git](https://github.com/guilhermecara/portfolio.git)
 
+## Infrastructure & CI/CD Pipeline
+
+This portfolio is not just statically hosted; it is actively deployed within a secure homelab environment utilizing a custom Continuous Deployment pipeline.
+
+* **Containerization:** The application is packaged using Docker and served via a highly optimized Nginx Alpine image.
+* **Automated Deployment:** A self-hosted GitHub Actions runner sits securely behind the local firewall. Pushes to the `main` branch trigger a pull-based deployment, rebuilding and swapping the Docker containers with zero downtime.
 
 ### Usage & Attribution
 
