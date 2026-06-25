@@ -78,6 +78,14 @@ const translations = {
 }
 
 let currentLang = localStorage.getItem("lang") || "EN";
+const browserLang = navigator.language.toLowerCase();
+        
+// Auto-Language selection
+// if the browser language starts with 'fr' (covers fr-CA, fr-FR, etc.)
+if (browserLang.startsWith('fr')) {
+    currentLang = 'FR';
+}
+
 const birthday = new Date("2006-12-23");
 const age = calculateYearsAmount(birthday,new Date())
 

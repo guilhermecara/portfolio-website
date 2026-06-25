@@ -1,6 +1,9 @@
+version: '1.0'
+
 services:
   portfolio:
     build: .
+    container_name: portfolio-site
     restart: unless-stopped
     ports:
       - "80:80"
