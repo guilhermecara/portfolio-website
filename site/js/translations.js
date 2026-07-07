@@ -25,6 +25,8 @@ const translations = {
         "about.unitedCTF": "1st Place: UnitedCTF 2025 (Cégep de Ste-Foy)",
         "about.ben10": "\"Ben 10 Cosmic Storm\" (Roblox): 3M+ visits, 4K+ concurrent",
 
+        "skills.cyber": "Cybersecurity",
+
         "projects.title": "My projects",
         "projects.ben10description": " A fully-featured Roblox game reaching 3M+ visits and 4K+ concurrent players. Built complete game systems including combat, progression, and server-side anti-cheat logic.",
         "projects.cdiscordDescription": "A lightweight, cross-platform Terminal User Interface for Discord built with Node.js and the blessed library. It allows users to navigate servers, read channels, and chat directly from Linux and Windows terminals without the overhead of a heavy desktop client. It is only a mere 2 megabytes, compared to the heavy Discord client. ",
@@ -61,6 +63,8 @@ const translations = {
         "about.credentials": "Certifications et réalisations",
         "about.unitedCTF": "1re place : UnitedCTF 2025 (Cégep de Sainte-Foy)",
         "about.ben10": "« Ben 10 Cosmic Storm » (Roblox) : plus de 3 millions de visites, plus de 4 000 utilisateurs simultanés",
+
+        "skills.cyber": "Cybersecurity",
 
         "projects.title": "Mes projets",
         "projects.ben10description": "Un jeu Roblox complet ayant atteint plus de 3 millions de visites et 4 000 joueurs simultanés. Développement de systèmes de jeu complets, incluant le combat, la progression et la logique anti-triche côté serveur.",
