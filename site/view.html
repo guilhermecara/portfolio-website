@@ -1,55 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Document Viewer</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            background-color: #121212; /* Dark background before loading */
             overflow: hidden;
+            -webkit-overflow-scrolling: touch;
         }
         #pdf-frame {
             height: 100vh;
             width: 100vw;
             border: none;
+            display: block;
         }
         #pdf-frame:not([src]) {
             display: none;
-        }
-        #error-msg {
-            display: none;
-            font-family: system-ui, sans-serif;
-            text-align: center;
-            padding: 2rem;
         }
     </style>
 </head>
 <body>
 
-    <iframe id="pdf-frame" title="CV Preview" allowfullscreen></iframe>
-    <div id="error-msg">
-        <p>No file specified.</p>
-    </div>
+    <iframe id="pdf-frame" title="Document Preview" allowfullscreen></iframe>
 
     <script type="text/javascript">
+        // 1. Grab the file parameter from your clean URL
         const urlParams = new URLSearchParams(window.location.search);
-        const targetPdf = urlParams.get('file');
-        const frame = document.getElementById('pdf-frame');
-        const errorMsg = document.getElementById('error-msg');
+        let targetPdf = urlParams.get('file');
 
-        if (targetPdf) {
-            // /vendor/pdfjs/web/viewer.html is the self-hosted, official
-            // PDF.js viewer build. It natively supports ?file=<url>.
-            const viewerUrl = '/vendor/pdfjs/web/viewer.html?file='
-                + encodeURIComponent(targetPdf);
-            frame.src = viewerUrl;
-        } else {
-            errorMsg.style.display = 'block';
+        // 2. Fallback: If no file is specified, default to your main CV
+        if (!targetPdf) {
+            targetPdf = '/cv/guilherme-cardoso-de-araujo-cv-fr.pdf';
         }
+
+        // 3. Ensure the path starts with a "/" so Nginx knows to look in the root
+        if (!targetPdf.startsWith('/')) {
+            targetPdf = '/' + targetPdf;
+        }
+
+        // 4. Point to the correct local PDF.js installation path
+        const viewerPath = '/pdfjs/web/viewer.html';
+        
+        // 5. Construct the final URL and load the iframe
+        const finalUrl = viewerPath + '?file=' + encodeURIComponent(targetPdf);
+        document.getElementById('pdf-frame').src = finalUrl;
     </script>
 
 </body>
