@@ -1,61 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
+    <title>CV - Guilherme Cardoso de Araujo</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
+        /* Basic styling to center the CV */
+        .pdf-container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
-        #pdf-frame {
-            height: 100vh;
-            width: 100vw;
-            border: none;
-        }
-        #pdf-frame:not([src]) {
-            display: none;
-        }
-        #error-msg {
-            display: none;
-            font-family: system-ui, sans-serif;
-            text-align: center;
-            padding: 2rem;
+        #pdf-render {
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
 
-    <iframe id="pdf-frame" title="CV Preview" allowfullscreen></iframe>
-    <div id="error-msg">
-        <p>No file specified.</p>
+    <div class="pdf-container">
+        <canvas id="pdf-render"></canvas>
     </div>
 
-    <script type="text/javascript">
-        const urlParams = new URLSearchParams(window.location.search);
-        const targetPdf = urlParams.get('file');
-        const frame = document.getElementById('pdf-frame');
-        const errorMsg = document.getElementById('error-msg');
-
-        if (targetPdf) {
-            // Resolve against the site root FIRST. Without this, a relative
-            // path like "cv/foo.pdf" gets resolved by the browser relative
-            // to viewer.html's own location (/vendor/pdfjs/web/) instead of
-            // the site root, and silently 404s.
-            const absolutePdfUrl = new URL(targetPdf, window.location.origin + '/').href;
-
-            // /vendor/web/viewer.html is the self-hosted, official
-            // PDF.js viewer build. It natively supports ?file=<url>.
-            const viewerUrl = '/vendor/web/viewer.html?file='
-                + encodeURIComponent(absolutePdfUrl);
-            frame.src = viewerUrl;
-        } else {
-            errorMsg.style.display = 'block';
-        }
-    </script>
+    <script src="js/pdf-viewer.js"></script>
 
 </body>
 </html>
