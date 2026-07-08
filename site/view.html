@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,45 +10,46 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden; 
+            overflow: hidden;
         }
-        #adobe-dc-view {
+        #pdf-frame {
             height: 100vh;
             width: 100vw;
+            border: none;
+        }
+        #pdf-frame:not([src]) {
+            display: none;
+        }
+        #error-msg {
+            display: none;
+            font-family: system-ui, sans-serif;
+            text-align: center;
+            padding: 2rem;
         }
     </style>
 </head>
 <body>
 
-    <div id="adobe-dc-view"></div>
+    <iframe id="pdf-frame" title="CV Preview" allowfullscreen></iframe>
+    <div id="error-msg">
+        <p>No file specified.</p>
+    </div>
 
-    <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-    
     <script type="text/javascript">
-        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-            var adobeDCView = new AdobeDC.View({
-                clientId: "9200ae567712402d9f29bd549d587c9a", 
-                divId: "adobe-dc-view"
-            });
-            
-            const urlParams = new URLSearchParams(window.location.search);
-            let targetPdf = urlParams.get('file');
-            const displayFileName = targetPdf.split('/').pop();
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetPdf = urlParams.get('file');
+        const frame = document.getElementById('pdf-frame');
+        const errorMsg = document.getElementById('error-msg');
 
-            adobeDCView.previewFile({
-                content:{
-                    location: {url: targetPdf}
-                },
-                metaData:{fileName: displayFileName}
-            }, {
-                embedMode: "FULL_WINDOW",
-                defaultViewMode: "FIT_PAGE",
-                showDownloadPDF: true,
-                showPrintPDF: false,
-                showAnnotationTools: false,
-                showLeftHandPanel: false
-            });
-        });
+        if (targetPdf) {
+            // /vendor/pdfjs/web/viewer.html is the self-hosted, official
+            // PDF.js viewer build. It natively supports ?file=<url>.
+            const viewerUrl = '/vendor/pdfjs/web/viewer.html?file='
+                + encodeURIComponent(targetPdf);
+            frame.src = viewerUrl;
+        } else {
+            errorMsg.style.display = 'block';
+        }
     </script>
 
 </body>
