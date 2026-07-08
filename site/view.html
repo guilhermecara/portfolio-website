@@ -47,9 +47,9 @@
             // the site root, and silently 404s.
             const absolutePdfUrl = new URL(targetPdf, window.location.origin + '/').href;
 
-            // /vendor/pdfjs/web/viewer.html is the self-hosted, official
+            // /vendor/web/viewer.html is the self-hosted, official
             // PDF.js viewer build. It natively supports ?file=<url>.
-            const viewerUrl = '/vendor/pdfjs/web/viewer.html?file='
+            const viewerUrl = '/vendor/web/viewer.html?file='
                 + encodeURIComponent(absolutePdfUrl);
             frame.src = viewerUrl;
         } else {
