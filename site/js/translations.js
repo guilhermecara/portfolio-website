@@ -8,7 +8,7 @@ const translations = {
         "nav.contact": "Contact",
 
         "hero.greeting": "Hi, I'm",
-        "hero.role": "Defensive Security Specialist & Software Developer.",
+        "hero.role": "Cybersecurity & Software Development.",
         "hero.description": " I build robust, full-stack applications and architect secure infrastructure. Whether I am developing useful software, hardening Linux environments, or competing in CTFs, my focus is always on bridging the gap between efficient code and impenetrable defense. ",
         "hero.about": "About me",
         "hero.projects": "My projects",
@@ -34,6 +34,8 @@ const translations = {
         "projects.milkgrubDescription": "A custom GRUB bootloader theme inspired by the visual novel \"Milk outside a bag of milk\", modified with a blue color palette. Designed for Linux users who want a cohesive, personalized UI aesthetic from the moment their system boots. ",
         "projects.homelabTitle": "Personal Homelab Infrastructure",
         "projects.homelabDescription": "A custom self-hosted Linux server environment hosting this portfolio and personal media services. Features a secure, automated CI/CD pipeline using a self-hosted GitHub Actions runner, containerized deployments with Docker and Nginx, and remote management via a Tailscale private VPN mesh.",
+        "projects.siemTitle": "Wazuh SIEM Lab",
+        "projects.siemDescription": "A containerized SIEM environment deployed with Wazuh to gain hands-on experience in log ingestion, endpoint monitoring, and detection engineering. Features real-time File Integrity Monitoring (FIM with auditd), telemetry across Linux and Windows endpoints via a Tailscale mesh VPN, and active threat simulations.",
     
         "contact.title": "Contact me",
         "contact.description": " I'm currently open to internship opportunities and exciting collaborations. Whether you have a project in mind or just want to say hi, my inbox is always open! ",
@@ -47,7 +49,7 @@ const translations = {
         "nav.contact": "Contact",
 
         "hero.greeting": "Salut, je suis",
-        "hero.role": "Spécialiste en sécurité défensive et développeur logiciel.",
+        "hero.role": "Cybersécurité et Développement logiciel.",
         "hero.description": "Je développe des applications « full-stack » robustes et je conçois des infrastructures sécurisées. Que ce soit en développant des logiciels utiles, en renforçant la sécurité d’environnements Linux ou en participant à des CTF, mon objectif est toujours de concilier un code efficace et une défense impénétrable.",
         "hero.about": "À propos de moi",
         "hero.projects": "Mes projets",
@@ -73,6 +75,8 @@ const translations = {
         "projects.milkgrubDescription": "Un thème personnalisé pour le chargeur d'amorçage GRUB, inspiré du visual novel \"Milk outside a bag of milk\" et modifié avec une palette de couleurs bleutées. Conçu pour les utilisateurs Linux souhaitant une interface esthétique, cohérente et personnalisée dès le démarrage de leur système.",
         "projects.homelabTitle": "Infrastructure Homelab Personnelle",
         "projects.homelabDescription": "Un environnement de serveur Linux auto-hébergé sur mesure, hébergeant ce portfolio ainsi que des services multimédias personnels. Il comprend un pipeline CI/CD sécurisé et automatisé utilisant un exécuteur GitHub Actions auto-hébergé, des déploiements conteneurisés avec Docker et Nginx, ainsi qu'une gestion à distance via un réseau maillé VPN privé Tailscale.",
+        "projects.siemTitle": "Laboratoire SIEM Wazuh",
+        "projects.siemDescription": "Un environnement SIEM conteneurisé déployé avec Wazuh pour acquérir une expérience pratique en ingestion de journaux, surveillance des points de terminaison et ingénierie de détection. Comprend la surveillance d'intégrité des fichiers en temps réel (FIM avec auditd), la télémétrie d'hôtes Linux et Windows via un VPN maillé Tailscale et des simulations actives de menaces.",
 
         "contact.title": "Contactez-moi",
         "contact.description": "Je suis actuellement à l'écoute d'opportunités de stage et de collaborations. Que vous ayez un projet en tête ou que vous souhaitiez simplement dire bonjour, ma boîte mail est toujours ouverte !",
