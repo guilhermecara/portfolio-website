@@ -9,7 +9,7 @@ const translations = {
 
         "hero.greeting": "Hi, I'm",
         "hero.role": "Cybersecurity & Software Development.",
-        "hero.description": " I build robust, full-stack applications and architect secure infrastructure. Whether I am developing useful software, hardening Linux environments, or competing in CTFs, my focus is always on bridging the gap between efficient code and impenetrable defense. ",
+        "hero.description": "I build robust, full-stack applications and architect secure infrastructure. Whether I am developing useful software, hardening Linux environments, or competing in CTFs, my focus is always on bridging the gap between efficient code and impenetrable defense. ",
         "hero.about": "About me",
         "hero.projects": "My projects",
         "hero.cvView": "View CV",
